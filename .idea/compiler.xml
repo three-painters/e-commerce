@@ -7,13 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-cloud-config" />
-        <module name="coremanagementcommon" />
-        <module name="core-management-server" />
-        <module name="businessmanagement" />
         <module name="spring-cloud-zuul" />
+        <module name="core-management-server" />
+        <module name="coremanagementsdk" />
+        <module name="businessmanagement" />
         <module name="seckillsystem" />
         <module name="spring-cloud-eureka" />
-        <module name="coremanagementsdk" />
+        <module name="coremanagementcommon" />
         <module name="operatormanagement" />
       </profile>
     </annotationProcessing>
