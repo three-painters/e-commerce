@@ -16,7 +16,7 @@ spring:
     config:
       server:
         git:
-#          uri: https://gitee.com/chuyaliang/config-center.git
-#          search-paths: ovopark-config
-#          username: 444782834@qq.com
-#          password: 65325646
+          uri: https://github.com/CN-Donily/config-center.git
+          search-paths: '{application}'
+          username: ld19950104@163.com
+          password: DNFbanzhuan1995
