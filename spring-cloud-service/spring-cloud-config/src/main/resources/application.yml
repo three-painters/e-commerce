@@ -7,8 +7,8 @@ eureka:
       defaultZone: http://127.0.0.1:8000/eureka/
   instance:
     prefer-ip-address: true
-      
-    
+    ip-address: 129.204.105.83
+
 spring:
   application:
     name: spring-cloud-config
@@ -17,6 +17,5 @@ spring:
       server:
         git:
           uri: https://github.com/CN-Donily/config-center.git
-          search-paths: '{application}'
           username: ld19950104@163.com
           password: DNFbanzhuan1995
