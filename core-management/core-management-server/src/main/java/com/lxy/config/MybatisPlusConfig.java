@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
  * @author Donily
  * @Description
  * @project springboot_learn
- * @package cn.com.liud.aa.config
- * @date 2019/09/23
+ * @package com.lxy.config
+ * @date 2020/03/13
  */
 @Configuration
 public class MybatisPlusConfig {
