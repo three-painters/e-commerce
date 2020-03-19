@@ -22,6 +22,9 @@
         <module>business-management</module>
         <module>seckill-system</module>
         <module>spring-cloud-service</module>
+        <module>customer-management</module>
+        <module>product-management</module>
+        <module>order-management</module>
     </modules>
 
     <properties>

@@ -6,15 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-cloud-config" />
-        <module name="coremanagementcommon" />
-        <module name="core-management-server" />
-        <module name="businessmanagement" />
-        <module name="spring-cloud-zuul" />
-        <module name="seckillsystem" />
+        <module name="seckill-system" />
+        <module name="core-management-sdk" />
         <module name="spring-cloud-eureka" />
-        <module name="coremanagementsdk" />
+        <module name="spring-cloud-config" />
+        <module name="customer-management-common" />
+        <module name="order-management-sdk" />
+        <module name="customer-management-sdk" />
+        <module name="spring-cloud-zuul" />
+        <module name="business-management" />
+        <module name="order-management-server" />
+        <module name="core-management-common" />
+        <module name="seckillsystem" />
+        <module name="product-management-sdk" />
+        <module name="product-management-common" />
         <module name="operatormanagement" />
+        <module name="operator-management" />
+        <module name="product-management-server" />
+        <module name="order-management-common" />
+        <module name="coremanagementcommon" />
+        <module name="businessmanagement" />
+        <module name="coremanagementsdk" />
+        <module name="core-management-server" />
+        <module name="customer-management-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,12 +38,29 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="business-management" options="-parameters" />
       <module name="businessmanagement" options="-parameters" />
+      <module name="core-management-common" options="-parameters" />
+      <module name="core-management-sdk" options="-parameters" />
       <module name="core-management-server" options="-parameters" />
       <module name="coremanagement" options="-parameters" />
       <module name="coremanagementcommon" options="-parameters" />
       <module name="coremanagementsdk" options="-parameters" />
+      <module name="customer-management" options="-parameters" />
+      <module name="customer-management-common" options="-parameters" />
+      <module name="customer-management-sdk" options="-parameters" />
+      <module name="customer-management-server" options="-parameters" />
+      <module name="operator-management" options="-parameters" />
       <module name="operatormanagement" options="-parameters" />
+      <module name="order-management" options="-parameters" />
+      <module name="order-management-common" options="-parameters" />
+      <module name="order-management-sdk" options="-parameters" />
+      <module name="order-management-server" options="-parameters" />
+      <module name="product-management" options="-parameters" />
+      <module name="product-management-common" options="-parameters" />
+      <module name="product-management-sdk" options="-parameters" />
+      <module name="product-management-server" options="-parameters" />
+      <module name="seckill-system" options="-parameters" />
       <module name="seckillsystem" options="-parameters" />
       <module name="sping-cloud-eureka" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
