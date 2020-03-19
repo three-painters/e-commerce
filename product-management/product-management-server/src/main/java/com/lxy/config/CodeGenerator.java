@@ -19,7 +19,7 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = System.getProperty("user.dir");
+        String projectPath = System.getProperty("user.dir") + "/product-management/product-management-server";
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
@@ -64,7 +64,7 @@ public class CodeGenerator {
             }
         };
         List<FileOutConfig> focList = new ArrayList<>();
-        focList.add(new FileOutConfig("/src/main/resources/mybatis/mapper.xml.vm") {
+        focList.add(new FileOutConfig("/mybatis/mapper.xml.vm") {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
@@ -83,7 +83,7 @@ public class CodeGenerator {
         // 表名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 需要生成的表
-        strategy.setInclude(new String[] { "" });
+        strategy.setInclude(new String[] { "brand_info","product_category","product_comment","product_info","product_pic_info","supplier_info" });
         // 排除生成的表
         //strategy.setExclude(new String[]{"test"});
         strategy.setEntityLombokModel( true );

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lxy.mapper.CustomerInfMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.lxy.model.CustomerInf">
+                    <id column="customer_inf_id" property="customerInfId" />
+                    <result column="customer_id" property="customerId" />
+                    <result column="customer_name" property="customerName" />
+                    <result column="identity_card_type" property="identityCardType" />
+                    <result column="identity_card_no" property="identityCardNo" />
+                    <result column="mobile_phone" property="mobilePhone" />
+                    <result column="customer_email" property="customerEmail" />
+                    <result column="gender" property="gender" />
+                    <result column="user_point" property="userPoint" />
+                    <result column="register_time" property="registerTime" />
+                    <result column="birthday" property="birthday" />
+                    <result column="customer_level" property="customerLevel" />
+                    <result column="user_money" property="userMoney" />
+                    <result column="modified_time" property="modifiedTime" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+        customer_inf_id, customer_id, customer_name, identity_card_type, identity_card_no, mobile_phone, customer_email, gender, user_point, register_time, birthday, customer_level, user_money, modified_time
+    </sql>
+
+</mapper>
