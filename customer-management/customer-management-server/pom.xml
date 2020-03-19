@@ -70,6 +70,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.lxy</groupId>
+            <artifactId>customer-management-common</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
