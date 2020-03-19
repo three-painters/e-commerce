@@ -43,7 +43,7 @@ public class CodeGenerator {
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUrl("jdbc:mysql://47.96.224.108:3306/e-commerce?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true");
+        dsc.setUrl("jdbc:mysql://47.96.224.108:3306/orderdb?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true");
         dsc.setUsername("root");
         dsc.setPassword("");
         mpg.setDataSource(dsc);
