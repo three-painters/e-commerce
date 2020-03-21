@@ -16,68 +16,20 @@ spring:
     name: spring-cloud-zuul
 zuul:
   routes: 
-#    shopweb-baby-merchants:
-#      path: /shopweb-baby-merchants/**
-#      serviceId: shopweb-baby-merchants
-#      strip-prefix: false
-#    component-aliyun:
-#      path: /component-aliyun/**
-#      serviceId: component-aliyun
-#      strip-prefix: false
-#    component-face:
-#      path: /component-face/**
-#      service-id: component-face
-#      strip-prefix: false
-#    component-redis:
-#      path: /component-redis/**
-#      service-id: component-redis
-#      strip-prefix: false
-#    shopweb-bigscreen:
-#      path: /shopweb-bigscreen/**
-#      service-id: shopweb-bigscreen
-#      strip-prefix: false
-#    shopweb-core:
-#      path: /shopweb-core/**
-#      service-id: shopweb-core
-#      strip-prefix: false
-#    shopweb-base-face:
-#      path: /shopweb-base-face/**
-#      service-id: shopweb-base-face
-#      strip-prefix: false
-#    shopweb-vip:
-#      path: /shopweb-vip/**
-#      service-id: shopweb-vip
-#      strip-prefix: false
-#    shopweb-airport:
-#      path: /shopweb-airport/**
-#      service-id: shopweb-airport
-#      strip-prefix: false
-#    shopweb-thirdparty:
-#      path: /shopweb-thirdparty/**
-#      service-id: shopweb-thirdparty
-#      strip-prefix: false
-#    shopweb-record:
-#      path: /shopweb-record/**
-#      service-id: shopweb-record
-#      strip-prefix: false
-#    shopweb-receivebook:
-#      path: /shopweb-receivebook/**
-#      service-id: shopweb-receivebook
-#      strip-prefix: false
-#    shopweb-hotspot:
-#      path: /shopweb-hotspot/**
-#      service-id: shopweb-hotspot
-#      strip-prefix: false
-#    shopweb-passengerflow:
-#      path: /shopweb-passengerflow/**
-#      service-id: shopweb-passengerflow
-#      strip-prefix: false
-#    shopweb-blacklist:
-#      path: /shopweb-blacklist/**
-#      service-id: shopweb-blacklist
-#      strip-prefix: false
-#    shopweb-smart-workshop:
-#      path: /shopweb-smart-workshop/**
-#      service-id: shopweb-smart-workshop
-#      strip-prefix: false
+    customer-management:
+      path: /customer/**
+      serviceId: customer-management
+      strip-prefix: false
+    product-management:
+      path: /product/**
+      serviceId: product-management
+      strip-prefix: false
+    order-management:
+      path: /order/**
+      service-id: order-management
+      strip-prefix: false
+    core-management:
+      path: /core/**
+      service-id: core-management
+      strip-prefix: false
       
