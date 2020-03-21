@@ -2,33 +2,34 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="seckill-system" />
-        <module name="core-management-sdk" />
-        <module name="spring-cloud-eureka" />
-        <module name="spring-cloud-config" />
-        <module name="customer-management-common" />
-        <module name="order-management-sdk" />
-        <module name="customer-management-sdk" />
-        <module name="spring-cloud-zuul" />
         <module name="business-management" />
-        <module name="order-management-server" />
-        <module name="core-management-common" />
-        <module name="seckillsystem" />
-        <module name="product-management-sdk" />
-        <module name="product-management-common" />
-        <module name="operatormanagement" />
-        <module name="operator-management" />
-        <module name="product-management-server" />
-        <module name="order-management-common" />
-        <module name="coremanagementcommon" />
         <module name="businessmanagement" />
-        <module name="coremanagementsdk" />
+        <module name="core-management-common" />
+        <module name="core-management-sdk" />
         <module name="core-management-server" />
+        <module name="coremanagementcommon" />
+        <module name="coremanagementsdk" />
+        <module name="customer-management-common" />
+        <module name="customer-management-sdk" />
         <module name="customer-management-server" />
+        <module name="operator-management" />
+        <module name="operatormanagement" />
+        <module name="order-management-common" />
+        <module name="order-management-sdk" />
+        <module name="order-management-server" />
+        <module name="product-management-common" />
+        <module name="product-management-sdk" />
+        <module name="product-management-server" />
+        <module name="seckill-system" />
+        <module name="seckillsystem" />
+        <module name="spring-cloud-config" />
+        <module name="spring-cloud-eureka" />
+        <module name="spring-cloud-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

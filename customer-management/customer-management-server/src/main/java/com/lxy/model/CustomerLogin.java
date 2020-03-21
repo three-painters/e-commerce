@@ -26,6 +26,11 @@ public class CustomerLogin extends Model<CustomerLogin> {
 
     private static final long serialVersionUID = 1L;
 
+    //用户状态正常
+    public static final int USER_STATUS_NORMAL = 0;
+    //用户状态 被删除
+    public static final int USER_STATUS_DELETE = 1;
+
     /**
      * 用户ID
      */
@@ -45,7 +50,7 @@ public class CustomerLogin extends Model<CustomerLogin> {
     /**
      * 用户状态
      */
-    private Integer userStats;
+    private Integer userStatus;
 
     /**
      * 最后修改时间
