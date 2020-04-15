@@ -19,3 +19,4 @@ spring:
           uri: https://github.com/CN-Donily/config-center.git
           username: ld19950104@163.com
           password: DNFbanzhuan1995
+          basedir: config-repo  # 本地仓库目录设定
