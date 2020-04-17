@@ -13,20 +13,6 @@ spring:
       discovery:
         enabled: true
         service-id: spring-cloud-config
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource     #表明使用Druid连接池
-    druid:
-      initial-size: 5                                #初始化时建立物理连接的个数
-      max-active: 20   #最大连接池数量
-      min-idle: 5      #最小连接池数量
-      max-wait: 3000   #获取连接时最大等待时间，单位毫秒
-      pool-prepared-statements: false   #是否缓存preparedStatement，也就是PSCache,PSCache对支持游标的数据库性能提升巨大，比如说oracle,在mysql下建议关闭
-      max-open-prepared-statements: -1  #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100
-      time-between-eviction-runs-millis: 60000  #配置检测可以关闭的空闲连接间隔时间
-      min-evictable-idle-time-millis: 300000 #配置连接在池中的最小生存时间
-      max-evictable-idle-time-millis: 400000 #配置连接在池中的最大生存时间
-      filters: stat,wall  #监控统计的stat,以及防sql注入的wall
-
 
 eureka:
   client:
