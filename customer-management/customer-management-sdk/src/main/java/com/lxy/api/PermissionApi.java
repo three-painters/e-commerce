@@ -1,7 +1,6 @@
 package com.lxy.api;
 
 import com.lxy.pojo.BaseResult;
-import com.lxy.pojo.CustomerDto;
 import com.lxy.pojo.PermissionDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;

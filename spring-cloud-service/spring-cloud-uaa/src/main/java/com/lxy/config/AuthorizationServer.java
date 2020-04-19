@@ -3,6 +3,7 @@ package com.lxy.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -34,8 +35,8 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private AuthorizationCodeServices authorizationCodeServices;
 
-//    @Autowired
-//    private AuthenticationManager authenticationManager;
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     /*
     客户端详情服务
@@ -59,7 +60,11 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
      */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        super.configure(endpoints);
+        endpoints
+                .authenticationManager(authenticationManager) //认证管理器
+                .authorizationCodeServices(authorizationCodeServices) //授权码服务
+                .tokenServices(tokenService()) //令牌服务管理
+                .allowedTokenEndpointRequestMethods(HttpMethod.POST);
     }
 
     /*
@@ -67,7 +72,11 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
      */
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        super.configure(security);
+        security
+                .tokenKeyAccess("permitAll()")       //oauth/token_key公开
+                .checkTokenAccess("permitAll()")     //oauth/chenk_token公开
+                .allowFormAuthenticationForClients() //表单认证
+                ;
     }
 
     /*
