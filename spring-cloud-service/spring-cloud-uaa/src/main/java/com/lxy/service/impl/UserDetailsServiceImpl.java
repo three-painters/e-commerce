@@ -44,7 +44,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         String[] permissionArr = null;
         if (CollectionUtils.isEmpty(permissions)) {
-            permissionArr = (String[]) permissions.stream().map(PermissionDto::getCode).toArray();
+            permissionArr = new String[permissions.size()];
+            permissions.toArray(permissionArr);
         }
 
         UserDetails userDetails = User.withUsername(customer.getLoginName())
