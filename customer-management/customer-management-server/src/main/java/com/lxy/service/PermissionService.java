@@ -2,6 +2,9 @@ package com.lxy.service;
 
 import com.lxy.model.Permission;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lxy.pojo.PermissionDto;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface PermissionService extends IService<Permission> {
 
+    List<PermissionDto> getPermissionsByCustomerId(Integer customerId);
 }

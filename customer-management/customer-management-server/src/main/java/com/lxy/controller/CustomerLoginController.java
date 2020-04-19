@@ -57,7 +57,7 @@ public class CustomerLoginController {
             return BaseResult.paramError();
         }
 
-        QueryWrapper wrapper = new QueryWrapper();
+        QueryWrapper<CustomerLogin> wrapper = new QueryWrapper();
         wrapper.eq("login_name", loginName);
         List<CustomerLogin> resList = customerLoginService.list(wrapper);
 

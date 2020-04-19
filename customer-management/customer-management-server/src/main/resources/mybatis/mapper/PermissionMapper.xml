@@ -15,4 +15,16 @@
         id, code, descrpption, URL
     </sql>
 
+    <select id="getPermissionsByCustomerId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        where id in (
+            select permission_id from role_permission where
+            role_id in (
+                select role_id from user_role where
+                customer_id = #{customerId}
+            )
+        )
+    </select>
+
 </mapper>
