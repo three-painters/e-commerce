@@ -52,7 +52,7 @@ public class CustomerLoginController {
     }
 
     @RequestMapping("/getCustomerByLoginName")
-    public BaseResult getCustomerByLoginName(String loginName) {
+    public BaseResult<CustomerDto> getCustomerByLoginName(String loginName) {
         if (StringUtils.isBlank(loginName)) {
             return BaseResult.paramError();
         }

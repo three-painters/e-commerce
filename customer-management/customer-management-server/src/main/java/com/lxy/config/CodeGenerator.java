@@ -83,7 +83,7 @@ public class CodeGenerator {
         // 表名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 需要生成的表
-        strategy.setInclude(new String[] { "customer_balance_log","customer_inf","customer_level_inf","customer_login","customer_login_log","customer_point_log" });
+        strategy.setInclude(new String[] { "role","permission","user_role","role_permission" });
         // 排除生成的表
         //strategy.setExclude(new String[]{"test"});
         strategy.setEntityLombokModel( true );
