@@ -43,7 +43,7 @@ public class CustomerLogin extends Model<CustomerLogin> {
     private String loginName;
 
     /**
-     * md5加密的密码
+     * 加密的密码
      */
     private String password;
 
