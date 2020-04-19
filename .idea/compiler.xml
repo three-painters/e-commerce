@@ -11,21 +11,22 @@
         <module name="core-management-sdk" />
         <module name="spring-cloud-eureka" />
         <module name="spring-cloud-config" />
+        <module name="spring-cloud-uaa" />
         <module name="seckill-system" />
         <module name="customer-management-sdk" />
         <module name="spring-cloud-zuul" />
         <module name="order-management-server" />
         <module name="core-management-common" />
         <module name="customer-management-common" />
+        <module name="coremanagementcommon" />
         <module name="product-management-sdk" />
         <module name="product-management-server" />
         <module name="operatormanagement" />
         <module name="operator-management" />
         <module name="seckillsystem" />
         <module name="order-management-sdk" />
-        <module name="order-management-common" />
         <module name="business-management" />
-        <module name="coremanagementcommon" />
+        <module name="order-management-common" />
         <module name="businessmanagement" />
         <module name="coremanagementsdk" />
         <module name="core-management-server" />
@@ -67,6 +68,7 @@
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-erueka" options="-parameters" />
       <module name="spring-cloud-eureka" options="-parameters" />
+      <module name="spring-cloud-uaa" options="-parameters" />
       <module name="spring-cloud-zuul" options="-parameters" />
       <module name="springcloudservice" options="-parameters" />
     </option>
