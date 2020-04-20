@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -44,8 +45,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         String[] permissionArr = null;
         if (CollectionUtils.isEmpty(permissions)) {
+            List<String> permissionCodes = permissions.stream().map(PermissionDto::getCode).collect(Collectors.toList());
             permissionArr = new String[permissions.size()];
-            permissions.toArray(permissionArr);
+            permissionCodes.toArray(permissionArr);
         }
 
         UserDetails userDetails = User.withUsername(customer.getLoginName())
