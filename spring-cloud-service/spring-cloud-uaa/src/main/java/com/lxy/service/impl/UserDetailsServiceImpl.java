@@ -44,9 +44,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
 
         String[] permissionArr = null;
-        if (CollectionUtils.isEmpty(permissions)) {
+        if (!CollectionUtils.isEmpty(permissions)) {
             List<String> permissionCodes = permissions.stream().map(PermissionDto::getCode).collect(Collectors.toList());
-            permissionArr = new String[permissions.size()];
+            permissionArr = new String[permissionCodes.size()];
             permissionCodes.toArray(permissionArr);
         }
 

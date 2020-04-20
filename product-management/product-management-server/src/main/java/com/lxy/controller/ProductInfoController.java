@@ -1,9 +1,16 @@
 package com.lxy.controller;
 
 
+import com.lxy.model.ProductInfo;
+import com.lxy.pojo.BaseResult;
+import com.lxy.pojo.ProductInfoDto;
+import com.lxy.service.ProductInfoService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -13,9 +20,30 @@ import org.springframework.stereotype.Controller;
  * @author Donily
  * @since 2020-03-19
  */
-@Controller
+@RestController
 @RequestMapping("/productInfo")
 public class ProductInfoController {
+    @Autowired
+    private ProductInfoService productInfoService;
+
+    @RequestMapping("/getProductInfoById")
+    @PreAuthorize("hasAnyAuthority('p1')")
+    public BaseResult<ProductInfoDto> getProductInfoById(Integer id) {
+        if (id == null) {
+            return BaseResult.paramError();
+        }
+
+        ProductInfo productInfo = productInfoService.getById(id);
+
+        ProductInfoDto dto = null;
+
+        if (productInfo != null) {
+            dto = new ProductInfoDto();
+            BeanUtils.copyProperties(productInfo, dto);
+        }
+
+        return BaseResult.success(dto);
+    }
 
 }
 
