@@ -12,7 +12,7 @@ public class SpringCloudUaaApplicationTests {
 
     @Test
     public void contextLoads() {
-        System.out.println(new BCryptPasswordEncoder().encode("123"));
+        System.out.println(new BCryptPasswordEncoder().encode("ycy"));
     }
 
 }

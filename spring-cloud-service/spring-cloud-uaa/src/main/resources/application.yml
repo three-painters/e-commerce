@@ -6,6 +6,11 @@ server:
 spring:
   application:
     name: spring-cloud-uaa
+  datasource:
+    url: jdbc:mysql://47.96.224.108:3306/customerdb?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
 
 eureka:
   client:
