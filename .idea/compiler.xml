@@ -20,15 +20,10 @@
         <module name="customer-management-common" />
         <module name="product-management-sdk" />
         <module name="product-management-server" />
-        <module name="operatormanagement" />
         <module name="operator-management" />
-        <module name="seckillsystem" />
         <module name="order-management-sdk" />
-        <module name="order-management-common" />
         <module name="business-management" />
-        <module name="coremanagementcommon" />
-        <module name="businessmanagement" />
-        <module name="coremanagementsdk" />
+        <module name="order-management-common" />
         <module name="core-management-server" />
         <module name="customer-management-server" />
       </profile>
@@ -41,19 +36,14 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="business-management" options="-parameters" />
-      <module name="businessmanagement" options="-parameters" />
       <module name="core-management-common" options="-parameters" />
       <module name="core-management-sdk" options="-parameters" />
       <module name="core-management-server" options="-parameters" />
-      <module name="coremanagement" options="-parameters" />
-      <module name="coremanagementcommon" options="-parameters" />
-      <module name="coremanagementsdk" options="-parameters" />
       <module name="customer-management" options="-parameters" />
       <module name="customer-management-common" options="-parameters" />
       <module name="customer-management-sdk" options="-parameters" />
       <module name="customer-management-server" options="-parameters" />
       <module name="operator-management" options="-parameters" />
-      <module name="operatormanagement" options="-parameters" />
       <module name="order-management" options="-parameters" />
       <module name="order-management-common" options="-parameters" />
       <module name="order-management-sdk" options="-parameters" />
@@ -63,14 +53,12 @@
       <module name="product-management-sdk" options="-parameters" />
       <module name="product-management-server" options="-parameters" />
       <module name="seckill-system" options="-parameters" />
-      <module name="seckillsystem" options="-parameters" />
       <module name="sping-cloud-eureka" options="-parameters" />
       <module name="spring-cloud-config" options="-parameters" />
       <module name="spring-cloud-erueka" options="-parameters" />
       <module name="spring-cloud-eureka" options="-parameters" />
       <module name="spring-cloud-uaa" options="-parameters" />
       <module name="spring-cloud-zuul" options="-parameters" />
-      <module name="springcloudservice" options="-parameters" />
     </option>
   </component>
 </project>
