@@ -29,7 +29,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sping-cloud-eureka" target="1.8" />
       <module name="spring-cloud-erueka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
