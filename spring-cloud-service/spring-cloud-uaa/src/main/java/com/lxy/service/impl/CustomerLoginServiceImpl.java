@@ -3,7 +3,6 @@ package com.lxy.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lxy.model.CustomerLogin;
 import com.lxy.mapper.CustomerLoginMapper;
-import com.lxy.pojo.BaseResult;
 import com.lxy.pojo.CustomerDto;
 import com.lxy.service.CustomerLoginService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
