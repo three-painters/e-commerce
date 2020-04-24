@@ -15,7 +15,11 @@ spring:
   application:
     name: spring-cloud-zuul
 zuul:
-  routes: 
+  routes:
+    spring-cloud-uaa:
+      path: /uaa/**
+      serviceId: spring-cloud-uaa
+      strip-prefix: false
     customer-management:
       path: /customer/**
       serviceId: customer-management
