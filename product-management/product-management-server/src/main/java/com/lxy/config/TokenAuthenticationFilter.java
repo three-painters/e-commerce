@@ -38,15 +38,17 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             //1.解析token
             String json = EncryptUtil.decodeUTF8StringBase64(token);
             JSONObject userJson = JSON.parseObject(json);
-            CustomerDto customer = new CustomerDto();
-            customer.setLoginName(userJson.getString("principal"));
+            //取出用户身份信息
+            String principal = userJson.getString("principal");
+            //将json转成对象
+            CustomerDto customer = JSON.parseObject(principal, CustomerDto.class);
             JSONArray authoritiesArray = userJson.getJSONArray("authorities");
 
-            String [] authorities = authoritiesArray.toArray( new String[authoritiesArray.size()]);
+            String [] authorities = authoritiesArray.toArray(new String[authoritiesArray.size()]);
 
             //2.新建并填充authentication
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(customer, null, AuthorityUtils.createAuthorityList(authorities));
-            authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails( httpServletRequest));
+            authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
             //3.将authentication保存进安全上下文
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }

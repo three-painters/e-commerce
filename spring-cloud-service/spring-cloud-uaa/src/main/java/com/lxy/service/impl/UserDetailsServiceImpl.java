@@ -1,5 +1,6 @@
 package com.lxy.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.lxy.api.CustomerApi;
 import com.lxy.api.PermissionApi;
 import com.lxy.pojo.BaseResult;
@@ -50,7 +51,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             permissionCodes.toArray(permissionArr);
         }
 
-        UserDetails userDetails = User.withUsername(customer.getLoginName())
+        //这里将user转为json，将整体user存入userDetails
+        String principal = JSON.toJSONString(customer);
+
+        UserDetails userDetails = User.withUsername(principal)
                 .password(customer.getPassword()).authorities(permissionArr).build();
 
         return userDetails;
