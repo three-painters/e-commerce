@@ -46,7 +46,7 @@ public class AuthFilter extends ZuulFilter {
         }
         OAuth2Authentication oauth2Authentication = (OAuth2Authentication)authentication;
         Authentication userAuthentication = oauth2Authentication.getUserAuthentication();
-        Object principal = userAuthentication.getPrincipal();
+        String principal = userAuthentication.getName();
         /**
          2.组装明文token，转发给微服务，放入header，名称为json‐token
          */
@@ -57,9 +57,9 @@ public class AuthFilter extends ZuulFilter {
         Map<String, String> requestParameters = oAuth2Request.getRequestParameters();
         Map<String,Object> jsonToken = new HashMap<>(requestParameters);
 
-        if(userAuthentication != null){
-            jsonToken.put("principal",userAuthentication.getName());
-            jsonToken.put("authorities",authorities);
+        if(userAuthentication != null) {
+            jsonToken.put("principal", principal);
+            jsonToken.put("authorities", authorities);
         }
 
         ctx.addZuulRequestHeader("json‐token", EncryptUtil.encodeUTF8StringBase64(JSON.toJSONString(jsonToken)));
