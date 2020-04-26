@@ -1,8 +1,10 @@
 package com.lxy.controller;
 
 
+import com.lxy.api.CustomerApi;
 import com.lxy.model.ProductInfo;
 import com.lxy.pojo.BaseResult;
+import com.lxy.pojo.CustomerDto;
 import com.lxy.pojo.ProductInfoDto;
 import com.lxy.service.ProductInfoService;
 import org.springframework.beans.BeanUtils;
@@ -25,6 +27,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductInfoController {
     @Autowired
     private ProductInfoService productInfoService;
+    @Autowired
+    private CustomerApi customerApi;
 
     @RequestMapping("/getProductInfoById")
     @PreAuthorize("hasAnyAuthority('p1')")
@@ -43,6 +47,12 @@ public class ProductInfoController {
         }
 
         return BaseResult.success(dto);
+    }
+
+    @RequestMapping("/testFeign")
+    public BaseResult<CustomerDto> testFeign() {
+        BaseResult<CustomerDto> customerRes = customerApi.getCustomerByLoginName("zhangsan");
+        return customerRes;
     }
 
 }
