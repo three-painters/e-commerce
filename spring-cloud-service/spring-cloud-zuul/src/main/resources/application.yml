@@ -36,4 +36,4 @@ zuul:
       path: /core/**
       service-id: core-management
       strip-prefix: false
-      
+  sensitive-headers:        #敏感头信息Authorization,Cookie,Set-Cookie默认是不转发的,设置zuul.sensitiveHeaders为空，就可以获取到了
