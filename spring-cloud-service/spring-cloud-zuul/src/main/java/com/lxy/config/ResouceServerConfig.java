@@ -41,7 +41,7 @@ public class ResouceServerConfig {
 
     /*
     product资源服务配置
-    OrderServerConfig指定了若请求匹配/product/**，也就是访问统一用户服务，接入客户端需要有scope中包含ROLE_API
+    ProductServerConfig指定了若请求匹配/product/**，也就是访问统一用户服务，接入客户端需要有scope中包含ROLE_API
      */
     @Configuration
     @EnableResourceServer
@@ -65,7 +65,56 @@ public class ResouceServerConfig {
         }
     }
 
+    /*
+    customer资源服务配置
+    CustomerServerConfig指定了若请求匹配/customer/**，也就是访问统一用户服务，接入客户端需要有scope中包含ROLE_API
+     */
+    @Configuration
+    @EnableResourceServer
+    public class CustomerServerConfig extends ResourceServerConfigurerAdapter {
+        @Autowired
+        private TokenStore tokenStore;
 
+        @Override
+        public void configure(ResourceServerSecurityConfigurer resources){
+            resources
+                    .tokenStore(tokenStore)
+                    .resourceId(RESOURCE_ID)
+                    .stateless(true);
+        }
 
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+            http.authorizeRequests()
+                    .antMatchers("/customer/**")
+                    .access("#oauth2.hasScope('ROLE_API')");
+        }
+    }
+
+    /*
+    order资源服务配置
+    OrderServerConfig指定了若请求匹配/order/**，也就是访问统一用户服务，接入客户端需要有scope中包含ROLE_API
+     */
+    @Configuration
+    @EnableResourceServer
+    public class OrderServerConfig extends ResourceServerConfigurerAdapter {
+        @Autowired
+        private TokenStore tokenStore;
+
+        @Override
+        public void configure(ResourceServerSecurityConfigurer resources){
+            resources
+                    .tokenStore(tokenStore)
+                    .resourceId(RESOURCE_ID)
+                    .stateless(true);
+        }
+
+        @Override
+        public void configure(HttpSecurity http) throws Exception {
+            http.authorizeRequests()
+                    .antMatchers("/order/**")
+                    .access("#oauth2.hasScope('ROLE_API')");
+        }
+    }
 
 }
